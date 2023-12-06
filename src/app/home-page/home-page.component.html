@@ -1,0 +1,11 @@
+<div class="text-center">
+  <h1>Car List</h1>
+</div>
+<div class="flex-row">
+  <div *ngFor="let car of carList" class="w-auto mb-3 align-items-center flex-row">
+    <app-car-wrapper
+      (removeItemEvent)="removeItem($event)"
+      [vehicle]="car">
+    </app-car-wrapper>
+  </div>
+</div>

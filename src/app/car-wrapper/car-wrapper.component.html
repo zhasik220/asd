@@ -1,0 +1,10 @@
+<div>
+  <app-car-edit *ngIf="editable == true"
+                    (editDataEvent)="handleSaveEdition($event)"
+                    [vehicle]="vehicle"> </app-car-edit>
+
+  <app-car-display *ngIf="editable == false"
+                       (removeItemEvent)="removeItemEvent.emit($event)"
+                       (editItemEvent)="handleEditClick()"
+                       [vehicle]="vehicle"></app-car-display>
+</div>
